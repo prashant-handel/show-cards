@@ -54,6 +54,7 @@ const ShowCards = () => {
                     ))}
                 </tbody>
             </table>
+            <Card data = {data}/>
         </>
     );
 };
