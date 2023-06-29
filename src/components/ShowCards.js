@@ -9,7 +9,7 @@ const ShowCards = () => {
             .then((response) => response.json())
             .then((json) => setData(json));
     }
-    console.log(data);
+    // console.log(data);
 
     useEffect(() => {
         FetchData();
@@ -38,12 +38,14 @@ const ShowCards = () => {
                         <td>User ID</td>
                         <td>Title</td>
                         <td>Body</td>
+                        <td>Delete</td>
+                        <td>Update Body</td>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((item, index) => (
                         <tr key={index}>
-                            <td>{item.id}</td>
+                            <th>{index+1}</th>
                             <td>{item.userId}</td>
                             <td>{item.title}</td>
                             <td>{item.body}</td>
